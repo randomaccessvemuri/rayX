@@ -7,6 +7,20 @@ class Vertex{
 private:
     Vector3 position;
     Vector3 normal;
+    //TODO: UV Mapping
+public:
+    __device__ __host__ Vertex(Vector3 position, Vector3 normal){
+        this->position = position;
+        this->normal = normal;
+    }
+
+    __device__ __host__ Vector3 getPosition(){
+        return position;
+    }
+
+    __device__ __host__ Vector3 getNormal(){
+        return normal;
+    }
 };
 
 class VertexBuffer{
